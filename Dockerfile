@@ -1,7 +1,8 @@
-FROM nginx:alpine
+# Usa la imagen oficial de Nginx
+FROM nginx:latest
 
-# Copiar los archivos de tu proyecto al contenedor
-COPY ./index.html /usr/share/nginx/html/index.html
+# Copia los archivos web al directorio de Nginx
+COPY index.html /usr/share/nginx/html/index.html
 
-# Exponer el puerto 80
+# Expone el puerto 80
 EXPOSE 80
